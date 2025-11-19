@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/index.js" defer></script>
+
+    <link rel="shortcut icon" href="./images/portfolio.webp" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="links">
+                <li><a href="#home" class="active-link"><svg class="w-6 h-6 text-gray-800 dark:text-white"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact Details</a></li>
+            </ul>
+            <ul id="mobile-links">
+                <li><a href="#home"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </li>
+                <li onclick="openSideBar()"><a>
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M10 4H4c-1.10457 0-2 .89543-2 2v12c0 1.1046.89543 2 2 2h6V4ZM4.37868 9.29289c-.39052.39053-.39052 1.02371 0 1.41421l1.29283 1.2928-1.29283 1.2929c-.39052.3905-.39052 1.0237 0 1.4142.39052.3905 1.02369.3905 1.41421 0l1.99994-2c.39053-.3905.39053-1.0236 0-1.4142L5.79289 9.29289c-.39052-.39052-1.02369-.39052-1.41421 0Z"
+                                clip-rule="evenodd" />
+                            <path d="M12 20h8c1.1046 0 2-.8954 2-2V6c0-1.10457-.8954-2-2-2h-8v16Z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+
+            <ul id="sidebar-links">
+                <li><a href="">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18 17.94 6M18 18 6.06 6" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="close-sidebar"><a href="#home">Home</a></li>
+                <li class="close-sidebar"><a href="#about">About</a></li>
+                <li class="close-sidebar"><a href="#projects">Projects</a></li>
+                <li class="close-sidebar"><a href="#skills">Skills</a></li>
+                <li class="close-sidebar"><a href="#education">Education</a></li>
+                <li class="close-sidebar"><a href="#contact">Contact Details</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <button id="top-btn" onclick="goToTop()">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m16 17-4-4-4 4m8-6-4-4-4 4" />
+            </svg>
+        </button>
+        <section id="home">
+            <div id="info">
+                <p>Hello I'm</p>
+                <p>Hema Sasank Seelam</p>
+                <p>My Skills are
+                    <span id="change-skill">
+                    </span>
+                    <span id="border-blink"></span>
+                </p>
+
+            </div>
+            <div id="middle"></div>
+            <div id="photo">
+                <img src="./images/my_photo.png" class="show" alt="profile-photo">
+            </div>
+        </section>
+        <section id="about">
+            <div class="custom-shape-divider-top-1763269255">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+            <p>
+                As a passionate and proactive developer, I’m always exploring new technologies and building practical
+                solutions. On my
+                GitHub account, I’ve created projects like MoneyNotes (a JavaScript based expense/finance tracker),
+                Music-Player (a
+                Python media player), NRR-calculation (JavaScript tool for cricket Net Run Rate), and telegram-bot-files
+                (Python
+                automation via bots).
+            </p>
+
+            <p>
+                With a solid foundation in JavaScript and Python, I’m actively expanding into new frameworks and tools —
+                always striving
+                to learn more and raise the bar for what I build. I believe meaningful software is built through
+                iteration,
+                collaboration, and a curiosity-driven mindset.
+            </p>
+
+            <p>
+                With a solid foundation in JavaScript and Python, I’m actively expanding into new frameworks and tools —
+                always striving
+                to learn more and raise the bar for what I build. I believe meaningful software is built through
+                iteration,
+                collaboration, and a curiosity-driven mindset.
+            </p>
+        </section>
+
+        <section id="projects">
+            <div class="custom-shape-divider-top-1763271256">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+            <div id="projects-grid">
+                <div class="project">
+                    <h3>💰 MoneyNotes — Personal Finance & Expense Tracking System</h3>
+                    <hr>
+                    <p id="desc">A full-stack finance tracker that helps users manage and analyze their daily expenses.
+                        Designed for simplicity,accuracy, and smooth user experience.
+                    </p>
+
+                    <p>MoneyNotes is a full-stack personal finance tracking application designed to help users manage
+                        and
+                        analyze their
+                        day-to-day expenses with ease. The goal of the project is to provide a lightweight, fast, and
+                        dependable alternative to
+                        heavy mobile finance apps. MoneyNotes runs entirely in the browser and stores user data securely
+                        using a cloud-hosted
+                        MySQL database.
+                    </p>
+                    <details>
+                        <summary>..more</summary>
+                        <p>
+                            🔍 Highlights
+                        <ul>
+                            <li>Secure Login / Signup / Forgot Password / Delete Account system</li>
+                            <li>Add, update, delete daily expenses</li>
+                            <li>Smart categorization of transactions</li>
+                            <li>Clean UI with smooth navigation</li>
+                            <li>Database hosted on Free Avian MySQL</li>
+                            <li>Fully deployed on Render (free tier)</li>
+                        </ul>
+                        </p>
+                        <p>
+                            🛠️ Tech Stack
+                        <ul>
+                            <li>Frontend: HTML, CSS, JavaScript</li>
+                            <li>Backend: MySQL, Django</li>
+                            <li>Hosting: Render (Free Tier)</li>
+                        </ul>
+                        </p>
+                    </details>
+                    <div class="buttons">
+                        <button><a href="https://github.com/HemaSasankSeelam/MoneyNotes" target="_blank">github <svg
+                                    class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961" />
+                                </svg>
+                            </a></button>
+                        <button><a href="https://moneynotes.onrender.com/" target="_blank">website
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961" />
+                                </svg>
+                            </a></button>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div>
+                        <h3>🎵 Music Player – Python Desktop Application (Windows)</h3>
+                        <hr>
+                    </div>
+                    <div id="details">
+                        <p id="desc">
+                            The Music Player is a lightweight desktop application built for Windows
+                            systems,designed to offer a smooth and simple way to play local audio files.
+                        </p>
+                        <p>
+                            The UI is built using Tkinter, which integrates naturally with Windows and ensures fast
+                            loading,
+                            responsive buttons, and
+                            a native application feel. Audio playback is handled by the Pygame mixer, which is highly
+                            stable
+                            on
+                            Windows and supports
+                            MP3/WAV formats with minimal delay. The player allows users to browse their Windows file
+                            system,
+                            select songs, and control playback easily.
+                        </p>
+                        <details>
+                            <summary>..more</summary>
+                            <p>
+                                🔍 Highlights
+                            <ul>
+                                <li>Play / Pause / Stop controls</li>
+                                <li>Add music files directly from system</li>
+                                <li>Displays current track</li>
+                                <li>Lightweight and beginner friendly</li>
+                            </ul>
+                            </p>
+
+                            <p>
+                                🛠️ Tech Stack
+
+                            <ul>
+                                <li>Python</li>
+                                <li>Modules: Tkinter (UI), Pygame (Audio)</li>
+                            </ul>
+                            </p>
+
+                        </details>
+                    </div>
+                    <div class="buttons">
+                        <button><a href="https://github.com/HemaSasankSeelam/Music-Player" target="_blank">github <svg
+                                    class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961" />
+                                </svg>
+                            </a></button>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div>
+                        <h3>📊 NRR Calculation – Cricket Net Run Rate Calculator</h3>
+                        <hr>
+                    </div>
+                    <div id="details">
+                        <p id="desc">
+                            The NRR Calculation project is a lightweight web tool designed to help users quickly compute
+                            the
+                            NRR, in cricket tournaments.
+                        </p>
+                        <p>
+                            Built using HTML, CSS, and JavaScript,
+                            the tool allows users to
+                            enter runs scored, overs faced, runs conceded, and overs bowled, and instantly generates the
+                            correct NRR value.The interface is simple and beginner-friendly, making it easy for
+                            students,
+                            fans, and local tournament organizers to
+                            understand and apply NRR without confusion. All calculations follow the official cricket
+                            formula, ensuring accurate and
+                            reliable results.
+                        </p>
+                        <details>
+                            <summary>..more</summary>
+                            <p>
+                                🔍 Highlights
+                            <ul>
+                                <li>Direct input fields for runs scored, overs, runs conceded, and overs bowled</li>
+                                <li>Instantly computes NRR</li>
+                                <li>Shows formula and explanation for beginners</li>
+                                <li>Very fast & lightweight</li>
+                            </ul>
+                            </p>
+
+                            <p>
+                                🛠️ Tech Stack
+
+                            <ul>
+                                <li>Python</li>
+                                <li>JavaScript, HTML, CSS</li>
+                            </ul>
+                            </p>
+
+                        </details>
+                    </div>
+                    <div class="buttons">
+                        <button><a href="https://github.com/HemaSasankSeelam/NRR-calculation" target="_blank">github
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961" />
+                                </svg>
+                            </a></button>
+                        <button>
+                            <a href="https://hemasasankseelam.github.io/NRR-calculation/" target="_blank">website
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961" />
+                                </svg>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="skills">
+            <div class="custom-shape-divider-top-1763490226">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+
+            <div class="container">
+                <div class="slider">
+                </div>
+
+                <div class="slider" aria-hidden="true">
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="education">
+
+            <div class="container">
+                <div class="name-photo">
+                    <div id="photo"><img src="./images/kl-university.webp" alt="university-photo"></div>
+                    <div id="name">Koneru Lakshmaiah Educational Foundation</div>
+                </div>
+                <div class="more-details">
+                    <div id="graduation-details"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                            <path
+                                d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z" />
+                        </svg>
+                        B-Tech in Mechanical Engineering</div>
+
+                    <div id="passedout-year"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                            <path
+                                d="M320-400q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm160 0q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm160 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" />
+                        </svg>
+                        2021-2025
+                    </div>
+                    <div id="passed-score"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                            <path
+                                d="M295-119q-36-1-68.5-18.5T165-189q-40-48-62.5-114.5T80-440q0-83 31.5-156T197-723q54-54 127-85.5T480-840q83 0 156 32t127 87q54 55 85.5 129T880-433q0 77-25 144t-71 113q-28 28-59 42.5T662-119q-18 0-36-4.5T590-137l-56-28q-12-6-25.5-9t-28.5-3q-15 0-28.5 3t-25.5 9l-56 28q-19 10-37.5 14.5T295-119Zm2-80q9 0 18.5-2t18.5-7l56-28q21-11 43.5-16t45.5-5q23 0 46 5t44 16l57 28q9 5 18 7t18 2q19 0 36-10t34-30q32-38 50-91t18-109q0-134-93-227.5T480-760q-134 0-227 94t-93 228q0 57 18.5 111t51.5 91q17 20 33 28.5t34 8.5Zm183-281Zm0 120q33 0 56.5-23.5T560-440q0-8-1.5-16t-4.5-16l50-67q10 13 17.5 27.5T634-480h82q-15-88-81.5-144T480-680q-88 0-155 56.5T244-480h82q14-54 57-87t97-33q17 0 32 3t29 9l-51 69q-2 0-5-.5t-5-.5q-33 0-56.5 23.5T400-440q0 33 23.5 56.5T480-360Z" />
+                        </svg>
+                        CGPA 8.8</div>
+                    <div id="location"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Vaddeswaram, Guntur(DST), AP, India
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="container">
+                <div class="name-photo">
+                    <div id="photo"><img src="./images/narayana-collage.webp" alt="collage-photo"></div>
+                    <div id="name">Narayana Junior Collage</div>
+                </div>
+                <div class="more-details">
+                    <div id="graduation-details"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                            <path
+                                d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z" />
+                        </svg>
+                        Intermediate</div>
+                    <div id="passedout-year"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                            <path
+                                d="M320-400q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm160 0q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm160 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" />
+                        </svg>
+                        2019-2021
+                    </div>
+                    <div id="passed-score"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                            <path
+                                d="M295-119q-36-1-68.5-18.5T165-189q-40-48-62.5-114.5T80-440q0-83 31.5-156T197-723q54-54 127-85.5T480-840q83 0 156 32t127 87q54 55 85.5 129T880-433q0 77-25 144t-71 113q-28 28-59 42.5T662-119q-18 0-36-4.5T590-137l-56-28q-12-6-25.5-9t-28.5-3q-15 0-28.5 3t-25.5 9l-56 28q-19 10-37.5 14.5T295-119Zm2-80q9 0 18.5-2t18.5-7l56-28q21-11 43.5-16t45.5-5q23 0 46 5t44 16l57 28q9 5 18 7t18 2q19 0 36-10t34-30q32-38 50-91t18-109q0-134-93-227.5T480-760q-134 0-227 94t-93 228q0 57 18.5 111t51.5 91q17 20 33 28.5t34 8.5Zm183-281Zm0 120q33 0 56.5-23.5T560-440q0-8-1.5-16t-4.5-16l50-67q10 13 17.5 27.5T634-480h82q-15-88-81.5-144T480-680q-88 0-155 56.5T244-480h82q14-54 57-87t97-33q17 0 32 3t29 9l-51 69q-2 0-5-.5t-5-.5q-33 0-56.5 23.5T400-440q0 33 23.5 56.5T480-360Z" />
+                        </svg>
+                        Marks 861/1000</div>
+                    <div id="location"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Vijayawada, AP, India
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="name-photo">
+                    <div id="photo"><img src="./images/bhashyam-public-school.webp" alt="school-photo"></div>
+                    <div id="name">Bhashyam High School</div>
+                </div>
+                <div class="more-details">
+                    <div id="graduation-details"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                            <path
+                                d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z" />
+                        </svg>
+                        Secondary Education</div>
+                    <div id="passedout-year"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                            <path
+                                d="M320-400q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm160 0q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm160 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" />
+                        </svg>
+                        2018-2019
+                    </div>
+                    <div id="passed-score"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                            <path
+                                d="M295-119q-36-1-68.5-18.5T165-189q-40-48-62.5-114.5T80-440q0-83 31.5-156T197-723q54-54 127-85.5T480-840q83 0 156 32t127 87q54 55 85.5 129T880-433q0 77-25 144t-71 113q-28 28-59 42.5T662-119q-18 0-36-4.5T590-137l-56-28q-12-6-25.5-9t-28.5-3q-15 0-28.5 3t-25.5 9l-56 28q-19 10-37.5 14.5T295-119Zm2-80q9 0 18.5-2t18.5-7l56-28q21-11 43.5-16t45.5-5q23 0 46 5t44 16l57 28q9 5 18 7t18 2q19 0 36-10t34-30q32-38 50-91t18-109q0-134-93-227.5T480-760q-134 0-227 94t-93 228q0 57 18.5 111t51.5 91q17 20 33 28.5t34 8.5Zm183-281Zm0 120q33 0 56.5-23.5T560-440q0-8-1.5-16t-4.5-16l50-67q10 13 17.5 27.5T634-480h82q-15-88-81.5-144T480-680q-88 0-155 56.5T244-480h82q14-54 57-87t97-33q17 0 32 3t29 9l-51 69q-2 0-5-.5t-5-.5q-33 0-56.5 23.5T400-440q0 33 23.5 56.5T480-360Z" />
+                        </svg>
+                        CGPA 9.2</div>
+                    <div id="location"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Guntur, AP, India
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer id="contact">
+        <div class="contact-details">
+            <p id="phone-number">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e3e3e3">
+                    <path
+                        d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v124q18 7 29 22t11 34v80q0 19-11 34t-29 22v404q0 33-23.5 56.5T680-40H280Zm0-80h400v-720H280v720Zm0 0v-720 720Zm120-40h160q17 0 28.5-11.5T600-200q0-17-11.5-28.5T560-240H400q-17 0-28.5 11.5T360-200q0 17 11.5 28.5T400-160Z" />
+                </svg>
+                +91 8464925394
+            </p>
+            <p id="email">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e3e3e3">
+                    <path
+                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                </svg>
+                <a href="mailto:seelamhemasasank@gmail.com" target="_blank">
+                    seelamhemasasank@gmail.com
+                </a>
+            </p>
+        </div>
+        <div class="social-media-links">
+            <p id="linkedin">
+                <a href="https://www.linkedin.com/in/hema-sasank-seelam/" target="_blank">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z"
+                            clip-rule="evenodd" />
+                        <path d="M7.2 8.809H4V19.5h3.2V8.809Z" />
+                    </svg>
+                </a>
+            </p>
+            <p id="github">
+                <a href="https://github.com/HemaSasankSeelam" target="_blank">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
+                            clip-rule="evenodd" />
+                    </svg>
+            </p>
+            <p id="facebook">
+                <a href="https://www.facebook.com/HemaSasankSeelam/" target="_blank">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </p>
+            <p id="instagram">
+                <a href="https://www.instagram.com/hema_sasank.seelam/" target="_blank">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+                            clip-rule="evenodd" />
+                    </svg>
+
+                </a>
+            </p>
+        </div>
+        <div class="address">
+            <p>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e3e3e3">
+                    <path
+                        d="M360-440h80v-110h80v110h80v-190l-120-80-120 80v190Zm120 254q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                </svg>
+                <a href="https://www.google.com/maps/place/16%C2%B003'39.3%22N+80%C2%B048'54.1%22E/" target="_blank">
+                    3-101, Near Ramalayam, Karumuru(V), Repalle(M.D), Bapatala(D.S.T),Andhra Pradesh, India.
+                </a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
